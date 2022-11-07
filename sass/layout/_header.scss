@@ -1,0 +1,71 @@
+.header {
+    height: 95vh;
+    background: linear-gradient(106deg, rgba($color-primary, .8)30%, rgba($color-tertiary, .9)10% ),url('../../img/samsung-memory-qpRgrHWvjIg-unsplash\ \(1\).jpg');
+    background-size: cover;
+    
+    position: relative;
+
+
+    &__logo-box {
+        position: absolute;
+        top: 2rem;
+        left: 3rem;
+        font-weight: 700;
+        display: inline-block;
+        
+        
+        &--design-1 {
+            color: $color-black;
+            font-size: 3rem;
+        }
+        &--design-2 {
+            color: $color-secondary;
+            font-size: 3.5rem;
+        }
+    }
+
+
+}
+
+.text-box {
+    width: 50%;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    transform: translate(-50% -50%);
+
+
+}
+
+.picture-box {
+    display: inline-block;
+    position: absolute;
+    top: 30%;
+    right: 50%;
+    border-radius: 5px;
+    box-shadow: 0 1rem 1rem rgba($color-black,.5);  
+    overflow-y: hidden;
+    animation: fadeIN 1s 2.5s;
+    animation-fill-mode: backwards;    
+}
+
+.profile-picture {
+    height: 50rem;
+    width: auto;
+    filter: contrast(1);
+}
+
+.objective-box {
+
+    position: absolute;
+    top: 40%;
+    right: 12%;
+    width: 30%;
+    background-color: rgba($color-grey-dark, .5);
+    box-shadow: 0 1rem 1rem rgba($color-black,.5);  
+    border-radius: 5px;
+    padding: 2rem;
+    animation: fadeIN 1s 3s;
+    animation-fill-mode: backwards; 
+
+}

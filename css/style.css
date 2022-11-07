@@ -1,0 +1,269 @@
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(2rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-2rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes fadeIN {
+  0% {
+    opacity: 0;
+    transform: scale(0.2) translateY(10rem); }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0); } }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: 'Oswald';
+  font-weight: 400;
+  line-height: 1.6;
+  box-sizing: border-box;
+  padding: 0 3rem; }
+
+.heading-primary {
+  text-transform: uppercase;
+  backface-visibility: hidden; }
+  .heading-primary--intro {
+    font-size: 3rem;
+    display: block;
+    letter-spacing: .3rem;
+    animation: moveInRight 1s ease-in; }
+  .heading-primary--name {
+    font-size: 3.5rem;
+    display: block;
+    animation: moveInLeft 1s ease-in-out 1s;
+    animation-fill-mode: backwards; }
+    .heading-primary--name-color {
+      color: #76323f;
+      font-size: 4rem; }
+  .heading-primary--sub {
+    display: block;
+    animation: moveInRight 1s ease-in; }
+
+.heading-secondary {
+  font-size: 3rem;
+  text-transform: capitalize;
+  display: inline-block;
+  background-image: linear-gradient(to right, #0c3d10f6, #76323f);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: all .3s; }
+  .heading-secondary:hover {
+    transform: skewX(-5deg) skewY(-2deg) scale(1.1); }
+
+.objective-text {
+  font-size: 1.6rem;
+  color: #eee; }
+
+.heading-tertiary {
+  text-transform: capitalize;
+  font-size: 2rem;
+  color: #76323f;
+  padding: 2rem; }
+
+.feature-text {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  padding: 0 2rem 2rem 2rem;
+  text-align: center; }
+
+.margin-bottom-medium {
+  margin-bottom: 3.5rem; }
+
+.u-center-text {
+  text-align: center; }
+
+.btn, .btn:link {
+  color: #eee;
+  text-decoration: none;
+  font-size: 2.5rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  background-color: #76323f;
+  border-radius: 10rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+  transition: all .2s ease;
+  position: relative;
+  animation: moveInBottom .7s ease-in 2s;
+  animation-fill-mode: backwards; }
+
+.btn:hover {
+  transform: scale(1.1) translateY(-1rem);
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    content: '';
+    transform: scale(1.3) translateY(0);
+    opacity: 0; }
+
+.btn:active {
+  transform: scale(1) translateY(0.5rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.7); }
+
+.btn::after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #eee;
+  background-color: #76323f;
+  z-index: -400;
+  transition: all .4s; }
+
+.navigation {
+  float: right;
+  text-align: center;
+  width: 50%;
+  margin: auto; }
+  .navigation__list {
+    list-style: none; }
+  .navigation__item {
+    display: inline-block;
+    margin-top: 2rem;
+    text-decoration: none; }
+    .navigation__item:not(:last-child) {
+      margin-right: 15rem; }
+  .navigation__link {
+    text-decoration: none;
+    color: #000;
+    font-size: 2.5rem;
+    padding: .5rem 3rem;
+    background-color: rgba(118, 50, 63, 0.7);
+    border-radius: 10rem;
+    transition: all .2s; }
+    .navigation__link:hover {
+      color: #76323f;
+      background-color: rgba(12, 61, 16, 0.7);
+      transform: translateY(-1rem); }
+    .navigation__link:active {
+      transform: translateY(1rem); }
+
+.feature-box {
+  padding: 1rem;
+  background-color: rgba(85, 102, 85, 0.5);
+  border-radius: 5px;
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.5);
+  transition: all .2s; }
+  .feature-box:hover {
+    transform: scale(1.1) translateY(-1.5rem); }
+
+.header {
+  height: 95vh;
+  background: linear-gradient(106deg, rgba(215, 206, 199, 0.8) 30%, rgba(192, 159, 128, 0.9) 10%), url("../../img/samsung-memory-qpRgrHWvjIg-unsplash (1).jpg");
+  background-size: cover;
+  position: relative; }
+  .header__logo-box {
+    position: absolute;
+    top: 2rem;
+    left: 3rem;
+    font-weight: 700;
+    display: inline-block; }
+    .header__logo-box--design-1 {
+      color: #000;
+      font-size: 3rem; }
+    .header__logo-box--design-2 {
+      color: #76323f;
+      font-size: 3.5rem; }
+
+.text-box {
+  width: 50%;
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  transform: translate(-50% -50%); }
+
+.picture-box {
+  display: inline-block;
+  position: absolute;
+  top: 30%;
+  right: 50%;
+  border-radius: 5px;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.5);
+  overflow-y: hidden;
+  animation: fadeIN 1s 2.5s;
+  animation-fill-mode: backwards; }
+
+.profile-picture {
+  height: 50rem;
+  width: auto;
+  filter: contrast(1); }
+
+.objective-box {
+  position: absolute;
+  top: 40%;
+  right: 12%;
+  width: 30%;
+  background-color: rgba(85, 102, 85, 0.5);
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 2rem;
+  animation: fadeIN 1s 3s;
+  animation-fill-mode: backwards; }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^=col-] {
+    float: left; }
+    .row [class^=col-]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-2 {
+    width: calc((100% - 6rem)/2); }
+  .row .col-1-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  .row .col-2-3 {
+    width: calc(2 * ((100% - 2 * 6rem) / 3  ) + 6rem); }
+  .row .col-1-4 {
+    width: calc((100% - 3 * 6rem)/4); }
+  .row .col-2-4 {
+    width: calc( 2 * (100% - 3 * 6rem)/4 + 6rem); }
+  .row .col-3-4 {
+    width: calc( 3 * (100% - 3 * 6rem)/4 + 2 * 6rem); }
+
+.footer {
+  padding: 15rem 0;
+  background-color: #494949; }
+
+.section-feature {
+  padding: 20rem 0;
+  background-color: #d7cec7;
+  margin-top: -15vh; }

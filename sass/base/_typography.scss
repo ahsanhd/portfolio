@@ -1,0 +1,75 @@
+.heading-primary {
+
+    text-transform: uppercase;
+    backface-visibility: hidden;    
+    &--intro {
+        
+        font-size: 3rem;
+        display: block;
+        letter-spacing: .3rem;
+        animation: moveInRight 1s ease-in;
+        
+    }
+    
+    &--name {
+        font-size: 3.5rem;
+        display: block;
+        animation: moveInLeft 1s ease-in-out 1s;
+        animation-fill-mode: backwards;
+
+        &-color {
+            color: $color-secondary;
+            font-size: 4rem;    
+        }
+        
+        
+    }
+
+    &--sub {
+        display: block;
+        animation: moveInRight 1s ease-in;
+    }
+    
+}
+
+.heading-secondary {
+    font-size: 3rem;
+    text-transform: capitalize;
+    display: inline-block;
+
+    background-image:linear-gradient(to right, $color-accent, $color-secondary ) ;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    transition: all .3s;
+
+
+    &:hover {
+
+        transform: skewX(-5deg) skewY(-2deg) scale(1.1);
+    }
+
+        
+}
+
+.objective-text {
+    font-size: $defaul-fontsize;
+    color: $color-grey-light;
+}
+
+.heading-tertiary {
+    text-transform: capitalize;
+    font-size: 2rem;
+    color: $color-secondary;
+    padding: 2rem;
+   
+}
+
+.feature-text {
+    font-size: 1.5rem;  
+    text-transform: capitalize;
+    padding: 0 2rem 2rem 2rem;
+    text-align: center;
+}
+
