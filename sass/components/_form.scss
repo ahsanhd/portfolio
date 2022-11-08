@@ -1,0 +1,84 @@
+.book {
+  
+
+    &__form {
+
+        width: 50%;
+        padding: 4rem;
+    }
+}
+
+
+.form {
+
+
+    &__group {
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__input {
+
+        font-family: inherit;
+        font-size: 1.5rem;
+        border: none;
+        outline: none;
+        padding: 1.5rem 2rem;
+        display: block;
+        width: 90%;
+        border-radius: 3px;
+        color: inherit;
+        border-bottom: 2px solid transparent;
+
+        &:focus {
+            border-bottom: 5px solid $color-accent;
+            box-shadow: 0 2rem 1rem rgba($color-black,.2);
+        }
+
+        &:invalid {
+            border-bottom: 5px solid $color-secondary;
+        }
+
+        &::-webkit-input-placeholder {
+            color: $color-black-2;
+        }
+    }
+
+    &__label {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-left: 2rem;
+        margin-top: .7rem;
+        display: block;
+        transition: all .2s;
+
+    }
+
+    &__input:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+
+    &__text {
+        padding: 1.6rem 2rem;
+        font-family: inherit;
+        font-size: 1.5rem;
+        border: none;
+        outline: none;
+        border-radius: 3px;
+        border-bottom: 2px solid transparent;
+        display: block;
+
+        &::-webkit-input-placeholder {
+            color: $color-black-2;
+        }
+
+        &:focus {
+            border-bottom: 4px solid $color-black;
+            box-shadow: 0 2rem 2rem rgba($color-black,.4);
+        }
+    }
+
+}

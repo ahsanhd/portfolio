@@ -1,6 +1,7 @@
 .btn {
     &,
-    &:link {
+    &:link,
+    &:focus {
     color: $color-grey-light;
     text-decoration: none;
     font-size: 2.5rem;
@@ -13,12 +14,16 @@
     position: relative;
     animation: moveInBottom .7s ease-in 2s;
     animation-fill-mode: backwards;
+    border: none;
+    outline: none;
     
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
         transform: scale(1.1) translateY(-1rem);
         box-shadow: 0 2rem 4rem rgba($color-black, .2);
+        border-bottom:2px solid rgba($color-black, .2) ;
 
         &::after {
             content: '';
