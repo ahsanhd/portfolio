@@ -1,4 +1,14 @@
 .footer {
-    padding: 15rem 0;
+    padding: 5rem 0;
     background-color: $color-grey-darkish;
+    margin-top: -10vh;
+}
+
+.social-logo {
+    width: 40%;
+    transition: all .3s;
+
+    &:hover {
+        transform: skew(-3deg) scale(.8);
+    }
 }

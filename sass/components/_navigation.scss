@@ -2,11 +2,11 @@
   float: right;
   text-align: center;
   width: 50%;
-  margin: auto;
+  text-align:right;
 
   &__list {
     list-style: none;
-    
+  
 
    }
 
@@ -14,31 +14,40 @@
       display: inline-block;  
       margin-top: 2rem;
       text-decoration: none;
+
       
       &:not(:last-child) {
-        margin-right: 15rem;
+        margin-right: 5rem;
+      }
+      &:nth-child(3) {
+        margin-right: 2rem;
       }
 
+      &:hover {
+        transform: translateY(-.4rem);
+        
+      }
+      &:active {
+        transform: translateY(1rem);
+      }
    }
 
    &__link {
     text-decoration: none;
-    color: $color-black;
+    color: $color-grey-light;
     font-size: 2.5rem;
     padding: .5rem 3rem;
-    background-color: rgba($color-secondary,.7);
+    background-color: rgba($color-secondary,1);
     border-radius: 10rem;
     transition: all .2s;
 
     &:hover {
-        color: $color-secondary;
+        color: $color-black;
         background-color: rgba($color-accent,.7);
-        transform: translateY(-1rem);
-    }
-    &:active {
+        box-shadow: 0 1rem 1rem rgba($color-black,.2);
         
-        transform: translateY(1rem);
     }
+
 
    }
 }
