@@ -1,10 +1,21 @@
 .book {
   
     float: left;
+
+    @include response(phone) {
+        width: 100%;
+     }   
     &__form {
 
         width: 50%;
         padding: 4rem;
+    }
+
+    &__form {
+
+        @include response(phone) {
+            width: 100%;
+        }
     }
 }
 
@@ -12,10 +23,21 @@
 .form {
 
 
+    
+
     &__group {
         &:not(:last-child) {
             margin-bottom: 2rem;
         }
+
+        @include response(phone) {
+           text-align: center;
+           width: 100%;
+        }
+
+    
+        
+
     }
 
     &__input {
@@ -70,6 +92,10 @@
         border-radius: 3px;
         border-bottom: 2px solid transparent;
         display: block;
+
+        @include response(phone) {
+            width: 100%;
+         }   
 
         &::-webkit-input-placeholder {
             color: $color-black-2;

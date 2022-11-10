@@ -13,6 +13,12 @@
         font-weight: 700;
         display: inline-block;
         
+
+        @include response(phone) {
+
+            width: 100%;
+            text-align: center;
+        }
         
         &--design-1 {
             color: $color-black;
@@ -32,7 +38,7 @@
     position: absolute;
     top: 40%;
     left: 10%;
-    transform: translate(-50% -50%);
+    transform: translate(-10%);
 
 
 }
@@ -46,13 +52,31 @@
     box-shadow: 0 1rem 1rem rgba($color-black,.5);  
     overflow-y: hidden;
     animation: fadeIN 1s 2.5s;
-    animation-fill-mode: backwards;    
+    animation-fill-mode: backwards;   
+    
+    @include response(screen-mode-2) {
+
+        top: 25%;
+        right: 25%;
+    }
+
+    @include response(phone) {
+
+        right: 5%
+    }
 }
 
 .profile-picture {
     height: 50rem;
     width: auto;
     filter: contrast(1);
+
+    @include response(screen-mode-2) {
+
+        height: 40rem;
+    }
+
+
 }
 
 .objective-box {
@@ -67,5 +91,12 @@
     padding: 2rem;
     animation: fadeIN 1s 3s;
     animation-fill-mode: backwards; 
+
+    @include response(screen-mode-2) {
+
+        width: 70%;
+        top: 70%;
+        left: 10%;  
+    }
 
 }

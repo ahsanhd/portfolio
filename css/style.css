@@ -1,3 +1,30 @@
+/*
+cheking for Max-Width i.e. if width < ...px
+
+0-600PX    max-width:        For Phone 
+600-900px  max-width:        Tab-pot
+900-1200px max:width         Tab-land
+1200-1800px                  normal design without media queiry
+
+<1200px - ...px+   min-width         Desktop    (if width > 1200px)
+
+
+
+
+$breakpoint argument choices: 
+
+- phone
+-tab-port
+-tab-land
+-big-desktop
+
+
+1em = 16px
+
+!NOTE!  in media queiries rem and em are not affected by root size but on the default font size of browser which is 16px
+
+!NOTE! always put larger breakpoint before(pehle) the small breakpoints FOR TESTING MAX-WIDTH
+*/
 @keyframes moveInRight {
   0% {
     opacity: 0;
@@ -43,6 +70,12 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 93.75em) {
+    html {
+      font-size: 49%; } }
+  @media (max-width: 75em) {
+    html {
+      font-size: 45%; } }
 
 body {
   font-family: 'Oswald';
@@ -107,6 +140,9 @@ body {
 
 .margin-bottom-medium {
   margin-bottom: 3.5rem; }
+  @media (max-width: 43.75em) {
+    .margin-bottom-medium {
+      margin-bottom: 2rem !important; } }
 
 .u-center-text {
   text-align: center; }
@@ -126,6 +162,9 @@ body {
   animation-fill-mode: backwards;
   border: none;
   outline: none; }
+  @media (max-width: 37.5em) {
+    .btn, .btn:link, .btn:focus {
+      margin-right: 0 auto; } }
 
 .btn:hover, .btn:focus {
   transform: scale(1.1) translateY(-1rem);
@@ -159,6 +198,15 @@ body {
   text-align: center;
   width: 50%;
   text-align: right; }
+  @media (max-width: 43.75em) {
+    .navigation {
+      width: 68%; } }
+  @media (max-width: 37.5em) {
+    .navigation {
+      position: absolute;
+      top: 6%;
+      width: 100%;
+      text-align: center; } }
   .navigation__list {
     list-style: none; }
   .navigation__item {
@@ -197,12 +245,23 @@ body {
 
 .book {
   float: left; }
+  @media (max-width: 37.5em) {
+    .book {
+      width: 100%; } }
   .book__form {
     width: 50%;
     padding: 4rem; }
+  @media (max-width: 37.5em) {
+    .book__form {
+      width: 100%; } }
 
 .form__group:not(:last-child) {
   margin-bottom: 2rem; }
+
+@media (max-width: 37.5em) {
+  .form__group {
+    text-align: center;
+    width: 100%; } }
 
 .form__input {
   font-family: inherit;
@@ -245,6 +304,9 @@ body {
   border-radius: 3px;
   border-bottom: 2px solid transparent;
   display: block; }
+  @media (max-width: 37.5em) {
+    .form__text {
+      width: 100%; } }
   .form__text::-webkit-input-placeholder {
     color: #1a1818; }
   .form__text:focus {
@@ -262,6 +324,10 @@ body {
     left: 3rem;
     font-weight: 700;
     display: inline-block; }
+    @media (max-width: 37.5em) {
+      .header__logo-box {
+        width: 100%;
+        text-align: center; } }
     .header__logo-box--design-1 {
       color: #000;
       font-size: 3rem; }
@@ -274,7 +340,7 @@ body {
   position: absolute;
   top: 40%;
   left: 10%;
-  transform: translate(-50% -50%); }
+  transform: translate(-10%); }
 
 .picture-box {
   display: inline-block;
@@ -286,11 +352,21 @@ body {
   overflow-y: hidden;
   animation: fadeIN 1s 2.5s;
   animation-fill-mode: backwards; }
+  @media (max-width: 62.5em) {
+    .picture-box {
+      top: 25%;
+      right: 25%; } }
+  @media (max-width: 37.5em) {
+    .picture-box {
+      right: 5%; } }
 
 .profile-picture {
   height: 50rem;
   width: auto;
   filter: contrast(1); }
+  @media (max-width: 62.5em) {
+    .profile-picture {
+      height: 40rem; } }
 
 .objective-box {
   position: absolute;
@@ -303,6 +379,11 @@ body {
   padding: 2rem;
   animation: fadeIN 1s 3s;
   animation-fill-mode: backwards; }
+  @media (max-width: 62.5em) {
+    .objective-box {
+      width: 70%;
+      top: 70%;
+      left: 10%; } }
 
 .row {
   max-width: 114rem;
@@ -311,6 +392,9 @@ body {
     content: "";
     display: table;
     clear: both; }
+  @media (max-width: 56.25em) {
+    .row {
+      padding: 0 2rem; } }
   .row [class^=col-] {
     float: left; }
     .row [class^=col-]:not(:last-child) {
@@ -319,6 +403,10 @@ body {
     width: calc((100% - 6rem)/2); }
   .row .col-1-3 {
     width: calc((100% - 2 * 6rem) / 3); }
+    @media (max-width: 43.75em) {
+      .row .col-1-3 {
+        width: 100%;
+        margin-top: 3rem; } }
   .row .col-2-3 {
     width: calc(2 * ((100% - 2 * 6rem) / 3  ) + 6rem); }
   .row .col-1-4 {

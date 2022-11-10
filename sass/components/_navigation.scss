@@ -4,6 +4,20 @@
   width: 50%;
   text-align:right;
 
+
+  @include response(tab-port-1) {
+
+    width: 68%;
+  }
+
+  @include response(phone) {
+
+    position: absolute;
+    top: 6%;
+    width: 100%;
+    text-align: center;
+  }
+ 
   &__list {
     list-style: none;
   

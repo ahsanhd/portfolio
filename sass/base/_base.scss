@@ -7,6 +7,16 @@
 }
  html  {
     font-size: 62.5%;
+
+    @include response(screen-mode) {
+
+        font-size: 49%;
+    }
+
+    @include response(tab-land) {
+
+        font-size: 45%;
+    }
 }
 
 body {

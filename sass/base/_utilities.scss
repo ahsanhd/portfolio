@@ -1,5 +1,9 @@
 .margin-bottom-medium {
     margin-bottom: 3.5rem;
+
+    @include response (tab-port-1) {
+        margin-bottom: 2rem !important;
+    }
 }
 
 .u-center-text {

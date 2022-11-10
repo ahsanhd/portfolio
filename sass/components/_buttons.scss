@@ -16,6 +16,10 @@
     animation-fill-mode: backwards;
     border: none;
     outline: none;
+
+    @include response(phone) {
+        margin-right: 0 auto;
+    }
     
     }
 
