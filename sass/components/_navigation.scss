@@ -29,9 +29,16 @@
       margin-top: 2rem;
       text-decoration: none;
 
+    
       
       &:not(:last-child) {
         margin-right: 5rem;
+
+        @include response(phone-2) {
+          margin-right: 0rem;
+  
+        }
+
       }
       &:nth-child(3) {
         margin-right: 2rem;

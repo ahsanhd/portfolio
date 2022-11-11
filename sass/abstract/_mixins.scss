@@ -45,6 +45,11 @@ $breakpoint argument choices:
         @media (max-width:37.5em) { @content }   // 600px,  600/16 = 37.5
     }
 
+    @if $breakpoint == phone-2 {
+
+        @media (max-width:25em) { @content }   // 400px 
+    }
+    
     @if $breakpoint == phone-1 {
 
         @media (max-width:31.25em) { @content }   // 500px

@@ -5,6 +5,10 @@
     @include response(phone) {
         width: 100%;
      }   
+     @include response(phone-2) {
+        margin-top: -10rem;
+
+      }
     &__form {
 
         width: 50%;
