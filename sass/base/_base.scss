@@ -25,6 +25,11 @@ body {
     line-height: 1.6;
     box-sizing: border-box;
     padding: 0 3rem;
+
+    @include response(phone-2) {
+        padding:0 0rem;
+
+      }
 }
 
 

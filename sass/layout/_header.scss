@@ -72,7 +72,8 @@
     }
 
     @include response(phone-2) {
-       top: 15%;
+       top: 25%;
+       right: 10%;
 
       } 
 }
@@ -87,6 +88,10 @@
         height: 40rem;
     }
 
+    @include response(phone-2) {
+       height: 30rem;
+
+      }
 
 }
 
@@ -111,8 +116,11 @@
     }
 
     @include response(phone-2) {
-        top:63%;
-        padding: 1rem;
+        top:67%;
+        padding: 0rem;
+        width: 100%;  
+        left: 0;
+        margin: 0 1rem 0 1rem;
 
       }
 

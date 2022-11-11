@@ -83,6 +83,9 @@ body {
   line-height: 1.6;
   box-sizing: border-box;
   padding: 0 3rem; }
+  @media (max-width: 25em) {
+    body {
+      padding: 0 0rem; } }
 
 .heading-primary {
   text-transform: uppercase;
@@ -367,7 +370,8 @@ body {
       right: 5%; } }
   @media (max-width: 25em) {
     .picture-box {
-      top: 15%; } }
+      top: 25%;
+      right: 10%; } }
 
 .profile-picture {
   height: 50rem;
@@ -376,6 +380,9 @@ body {
   @media (max-width: 62.5em) {
     .profile-picture {
       height: 40rem; } }
+  @media (max-width: 25em) {
+    .profile-picture {
+      height: 30rem; } }
 
 .objective-box {
   position: absolute;
@@ -395,8 +402,11 @@ body {
       left: 10%; } }
   @media (max-width: 25em) {
     .objective-box {
-      top: 63%;
-      padding: 1rem; } }
+      top: 67%;
+      padding: 0rem;
+      width: 100%;
+      left: 0;
+      margin: 0 1rem 0 1rem; } }
 
 .row {
   max-width: 114rem;
